@@ -1,0 +1,58 @@
+.corpus {
+    background-color: azure;
+}
+
+.form-control {
+    margin-right: 5px;
+}
+
+.img {
+    margin-left: 870px;
+}
+
+.btn {
+    margin-left: 100px;
+}
+
+.para {
+    margin-left: 18px;
+    margin-top: 5px;
+}
+
+.red {
+    color: red;
+    text-decoration: none;
+}
+
+.rouge {
+    height: 50px;
+    color: white;
+}
+
+.search input {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+.section {
+    background-color: rgba(0, 255, 255, 0.247);
+}
+
+.border {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background-color: rgb(12, 11, 11);
+    height: 50px;
+}
+
+.pied {
+    color: white;
+    display: flex;
+    text-justify: center;
+    padding-top: 20px;
+}
