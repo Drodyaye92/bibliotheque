@@ -26,8 +26,13 @@ Route::get('/connexion',function (){
    return view ('connexion');
 })->name('connexion');
 Route::post('/inscription','Authcontroller@store')->name('inscrit.store');
-Route::post('/connexion', 'AuthController@authentificate')->name('authentificate');
-Route::get('/')
+Route::post('/connexion', 'Authcontroller@authentificate')->name('authentificate');
+Route::get('/enregister', 'Authcontroller@enregister')->name('enregister');
+Route::post('/enregistera','livrecontroller@save')->name('enregister.save');
+Route::post('/enregister','Admicontroller@save')->name('auteur.save');
+Route::get('/liste',function(){
+   return view('liste');
+})->name('lister');
 
 
-//Route::get('/', 'homeController@welcome')->name('home');
+

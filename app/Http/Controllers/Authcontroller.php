@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\bcrypt;
 
 class Authcontroller extends Controller
 {
-    
+        public function enregister(){
+return view('enregister');
+        }
     public function administrateurs(){
         $administrateurs = DB::select('select * from administrateurs');
-        //$livres = DB::select('select * from livres');
+       
         print_r(Session::get('email'));
 
-       // return view('/');
+      
     }
     public function authentificate(Request $request){
         $request->validate([
@@ -31,32 +33,25 @@ class Authcontroller extends Controller
             $request->input('password')
         ];
         $credentials = $request->only('email','password');
-
-       // $administrateur=$request= DB::select('select nom, prenom, email, password from administrateurs');
-      //  Session::put('email', $inputs[0]);
-
-        if (Auth::attempt($credentials)) {
-            $results = DB::select('select * from administrateurs where email=? AND password=?',$inputs);
-            return view('inscription');
+        //stocker les auteurs
+        $id_auteur= DB::select('select id_auteur,nom,prenom from auteurs');
+        
+        if (Auth::attempt($credentials)){
+            
+            print_r($id_auteur);
+        return view('enregister', ['id_auteur'=>$id_auteur]);
+        }else{
+            return view('connexion');
+        }
+        /* if ($credentials) {
+       
+            return view ('enregister');
          }
-        // else{
-          //     return ('erreur');
-           //  }
+        else{
+              return ('erreur');
+            }*/
      }
-        // if (Auth::attempt($credentials)) {
-        //     $resultat = DB::select('email,from administrateur where email =?', [$inputs[0]]);
-        //     return redirect('/')->with('sa marche');
-        // }
-       //else{
-        //   return ('erreur');
-        // }
-    //}
-
-
-
-
-
-
+    
 
 
        public function inscrit(){
@@ -79,7 +74,7 @@ class Authcontroller extends Controller
             $request->input('email'),
             $pass = bcrypt($request->input('password'))
         ];
-        $resultat = DB::insert('insert into administrateurs (nom, prenom, email, password) values (?, ?, ?, ?)', $data);
+        $resultat = DB::insert('insert into users (nom, prenom, email, password) values (?, ?, ?, ?)', $data);
         return view('connexion');   
     }
    

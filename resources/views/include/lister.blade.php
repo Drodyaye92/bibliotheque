@@ -29,19 +29,7 @@
         
     </header>
     <section class="section">
-        <div class="border">
-            
-        <div class="input w-25 ">
-        <h3 class="para m-5 justify-content-center">Enregister</h3>
-   <input type="text" class="form-control m-3" name="titre" placeholder="Titre">
-   <input type="text" class="form-control m-3" name="auteur" placeholder="Auteur">
-   <input type="text" class="form-control m-3" name="type" placeholder="Type">
-   <input type="text" class="form-control m-3" name="pays" placeholder="Pays">
-   <input type="date" class="form-control m-3" name="date" placeholder="Date">
-   <input type="text" class="form-control m-3" name="etagere" placeholder="Etagere">
-   <button type="submit" class="btn btn-primary" name="">Enregistrer</button>
-        </div>
-        </div>
+        
     </section>
 <footer class="footer">
     <p class="pied justify-content-center">copyright@/bibliotheque de Savan/mentions legales/avril 2021</p>

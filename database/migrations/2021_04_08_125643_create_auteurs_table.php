@@ -18,7 +18,7 @@ class CreateAuteursTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('pays');
-            $table->integer('id_livre')->references('id_livre')->on('livres');
+           
             //$table->id();
             //$table->timestamps();
         });
