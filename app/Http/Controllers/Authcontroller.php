@@ -38,7 +38,7 @@ return view('enregister');
         
         if (Auth::attempt($credentials)){
             
-            print_r($id_auteur);
+           // print_r($id_auteur);
         return view('enregister', ['id_auteur'=>$id_auteur]);
         }else{
             return view('connexion');

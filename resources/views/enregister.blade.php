@@ -1,5 +1,7 @@
 @extends('layout.master')
 @include('include.header')
+
+
 @section('contenu')<div class="contenu ">
 <div class="container">
 <div class="row">
@@ -24,14 +26,16 @@
                          <input type="text" class="form-control m-3" name="titre" placeholder="Titre">
                          <input type="text" class="form-control m-3" name="type" placeholder="Type">
                          <input type="date" class="form-control m-3" name="dateparution" placeholder="Date de parution">
+                         <label for="" class=" label mx-4">nom_auteur
                          <select name="auteur" id="">
                              <optgroup label="">
                                 @foreach($id_auteur as $id_auteur)
-                                <option value="{{$id_auteur->id_auteur}}">{{$id_auteur->nom}} {{$id_auteur->prenom}}</option>
+                                <option value="{{$id_auteur->id_auteur}}">{{$id_auteur->nom}} {{$id_auteur->prenom}} </option>
                                  @endforeach
                             </optgroup>
                          </select>
-                         <button type="submit" class="btn btn-primary" name="">Enregistrer</button>
+                         </label>
+                         <button type="submit" class="btn btn-primary " name="">Envoyer</button>
                </div>
           </form>
   </div>
@@ -39,3 +43,4 @@
 </div>
 </div>
 @endsection
+<!-- @include('include.footer') -->

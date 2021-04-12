@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/css/bootstrap.min.css"> 
     <title> Page de connexion</title>
-    <link  rel="stylesheet" href="assets/css/style.css">
+    
     <link  rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
     <link  rel="stylesheet" href="assets/bootstrap/bootstrap.min.js">
     <link  rel="stylesheet" href="assets/bootstrap/jquery.min.js">
+    <script type="text/javascript" src='assets/media/js/jquery.js'></script>
+    <script type="text/javascript" src="assets/media/js/jquery.dataTables.min.js"></script>
+    <link  rel="stylesheet" href="assets/media/js/dataTables.jqueryui.min.js">
+    <link rel="stylesheet" type="text/css" href="asset/media/css/jquery.dataTables.min.css">
+    <link  rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>

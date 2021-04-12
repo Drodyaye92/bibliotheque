@@ -7,7 +7,8 @@
 }
 
 .img {
-    margin-left: 870px;
+    justify-items: center;
+    justify-self: center;
 }
 
 .btn {
@@ -54,4 +55,11 @@
     display: flex;
     text-justify: center;
     padding-top: 20px;
+}
+
+.display {
+    width: 700px;
+    position: relative;
+    margin-top: -50px;
+    margin-left: 50px;
 }

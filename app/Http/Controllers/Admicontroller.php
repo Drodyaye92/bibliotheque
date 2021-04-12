@@ -19,14 +19,15 @@ public function save(Request $request){
         'nom'=>'required|string',
         'prenom'=>'required|string',
         'pays'=>'required|string',
-       
+      
     ]);
     
 
     $datas = [
         $request->input('nom'),
         $request->input('prenom'),
-        $request->input('pays'),   
+        $request->input('pays'),
+       
     ];
     $resultats = DB::insert('insert into auteurs (nom, prenom, pays) values (?, ?, ?)', $datas);
     $id_auteur= DB::select('select id_auteur,nom,prenom from auteurs');

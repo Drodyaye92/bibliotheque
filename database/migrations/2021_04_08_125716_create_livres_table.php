@@ -18,7 +18,8 @@ class CreateLivresTable extends Migration
             $table->string('titre');
             $table->string('type');
             $table->timestamp ('dateparution');
-            $table->integer('id_auteur')->references('id_auteur')->on('auteurs');;
+            $table->integer('id_auteurl');
+           
             
         });
     }

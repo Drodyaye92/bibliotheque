@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\utilisateur;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class Livrecontroller extends Controller
 {
@@ -14,25 +17,30 @@ class Livrecontroller extends Controller
     
 
 public function save(Request $request){
-    $datas=request()->validate([
+    $data=request()->validate([
         'titre'=>'required|string',
         'type'=>'required|string',
         'dateparution'=>'required',
-        //'id_auteur'=>'required|string'
+        'auteur'=>'required|string'
     ]);
     
 
-    $datas = [
+    $data = [
         $request->input('titre'),
         $request->input('type'),
         $request->input('dateparution'),
-        $request->input('id_auteur'),  
+        $request->input('auteur'),  
     ];
-    $resultats = DB::insert('insert into livres (titre, type, dateparution, id_auteur) values (?, ?, ?, ?)', $datas);
-    return view('liste');   
+
+    $livres= DB::select('select * from livres');
+            //    dd($livres);
+            //  return view('liste',['livres'=>$livres]);
+              // dd($livres);
+
+    $resultat = DB::insert('insert into livres (titre, type, dateparution,id_auteurl) values (?, ?, ?,?)', $data);
+    
+    return view('liste')->with(['livres'=>$livres]);   
 }
 
-    
-
-    
+       
 }
