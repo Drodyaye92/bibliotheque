@@ -54,12 +54,22 @@
     color: white;
     display: flex;
     text-justify: center;
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
-.display {
-    width: 700px;
+.play {
     position: relative;
     margin-top: -50px;
     margin-left: 50px;
+}
+
+.mile {
+    position: relative;
+    margin-left: 20px;
+}
+
+.espace {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 30px;
 }

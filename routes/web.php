@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +28,24 @@ Route::get('/connexion',function (){
 })->name('connexion');
 Route::post('/inscription','Authcontroller@store')->name('inscrit.store');
 Route::post('/connexion', 'Authcontroller@authentificate')->name('authentificate');
+// Route::get('/', function () {
+//   return view('');
+//   });
 Route::get('/enregister', 'Authcontroller@enregister')->name('enregister');
+// Route::get('/', function () {
+//   return view('');
+//   });
 Route::post('/enregistera','livrecontroller@save')->name('enregister.save');
 Route::post('/enregister','Admicontroller@save')->name('auteur.save');
 Route::get('/liste',function(){
-   return view('liste');
+   $livres= DB::select('select * from livres order by titre');
+   return view('liste',['livres'=>$livres]);
 })->name('lister');
+Route::post('/liste','livrecontroller@supprime')->name('livre.supprime');
+Route::get('/classer', function () {
+     return view('classer');
+})->name('classer');
+//Route::get('/classer', 'Authcontroller@administrateurs')->name('classement');
 
 
 

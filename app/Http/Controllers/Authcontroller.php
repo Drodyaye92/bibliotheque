@@ -18,11 +18,12 @@ return view('enregister');
         }
     public function administrateurs(){
         $administrateurs = DB::select('select * from administrateurs');
-       
         print_r(Session::get('email'));
-
+        return view('classer',['administrateurs'=>$administrateurs]);
+       
+         }
       
-    }
+    
     public function authentificate(Request $request){
         $request->validate([
             'email' => 'required|string|email',

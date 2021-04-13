@@ -32,14 +32,25 @@ public function save(Request $request){
         $request->input('auteur'),  
     ];
 
-    $livres= DB::select('select * from livres');
-            //    dd($livres);
-            //  return view('liste',['livres'=>$livres]);
-              // dd($livres);
-
+    $livres= DB::select('select * from livres order by titre');
+   
     $resultat = DB::insert('insert into livres (titre, type, dateparution,id_auteurl) values (?, ?, ?,?)', $data);
-    
-    return view('liste')->with(['livres'=>$livres]);   
+
+    return view('liste')->with(['livres'=>$livres]);
+       
+
+      
+}
+public function supprime(Request $request){
+
+   /*$resultat=DB::select('select from livres (titre, type, dateparution,id_auteurl)',['data'] );
+    $titre = $request->input('titre');
+    $type = $request->input('type');
+    $dateparution = $request->input('dadeparution');
+    $id_auteurl = $request->input('id_auteurl');
+    $del = DB::delete('delete from livres where titre=?, type=?, dateparution=?, id_auteurl=?',['data']);*/
+    DB::delete('delete from livres where id_livre='.$request->input('titre'));
+    return redirect()->route('lister');
 }
 
        

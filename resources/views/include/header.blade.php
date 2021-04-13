@@ -7,11 +7,11 @@
               </div>
         </div>
         <div class="container-fluid">
-            <div class="row rouge bg-danger ">
-              <div class="col-3"><a href="{{ route ('connexion')}}">Connexion</a></div>
-              <div class="col-3"><a href="{{ route ('enregister.save')}}">Ajouter</a></div>
-              <div class="col-3"><a href="{{ route ('lister')}}">Lister</a></div>
-              <div class="col-3"><a href="{{ route ('lister')}}">Profif</a></div>
+            <div class="row rouge bg-danger">
+              <div class="col-3"><a href="">Connexion</a></div>
+              <div class="col-3"><a href="">Ajouter</a></div>
+              <div class="col-3"><a href="">Lister</a></div>
+              <div class="col-3"><a href="">Profif</a></div>
             </div>
         </div>
  </header>
