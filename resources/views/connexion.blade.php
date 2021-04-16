@@ -1,13 +1,11 @@
 @extends('layout.master')
-@section('footer')
-@include('include.footer')
-@endsection
-@section('contenu')<div class="contenu ">
 
 
+
+@section('contenu')<div class="contenu justify-content-center">
 
 <div class="container d-flex justify-content-center">
-     <div class="">
+     <div class="group-form">
         <div class="img"> <img src="assets/images/bibliologo.PNG" class="rounded" alt=""></div>
             <div class="input ">
                 <form action="{{ route ('authentificate')}}" method="POST">
@@ -19,7 +17,9 @@
                 </form>
             </div>
      </div>
-</div> 
+</div>
+</div>
+@include('include.footer') 
 @endsection
 
 

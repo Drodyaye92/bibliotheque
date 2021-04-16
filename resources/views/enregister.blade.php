@@ -2,14 +2,14 @@
 @include('include.header')
 
 
-@section('contenu')<div class="contenu ">
+@section('contenu')<div class="contenu justify-content-center ">
 <div class="container">
 <div class="row">
  
-  <div class=" col-lg-6 border">
+  <div class=" col-lg-6 bord">
   <form action="{{ route('auteur.save')}}" method="POST">  
               @csrf 
-                <div class="input">
+                <div class=" group-form input">
                      <h3 class="para m-5 justify-content-center">Enregister Auteur</h3>
                          <input type="text" class="form-control m-3" name="nom" placeholder="nom">
                          <input type="text" class="form-control m-3" name="prenom" placeholder="prenom">
@@ -18,10 +18,10 @@
                </div>
     </form>
   </div>
-  <div class=" col-lg-6 border">
+  <div class=" col-lg-6 bord">
           <form action="{{route('enregister.save')}}" method="POST">  
               @csrf 
-                <div class="input">
+                <div class=" group-form input">
                      <h3 class="para m-5 justify-content-center">Enregister un livre</h3>
                          <input type="text" class="form-control m-3" name="titre" placeholder="Titre">
                          <input type="text" class="form-control m-3" name="type" placeholder="Type">
@@ -42,5 +42,6 @@
 </div>
 </div>
 </div>
+@include('include.footer') 
 @endsection
-<!-- @include('include.footer') -->
+

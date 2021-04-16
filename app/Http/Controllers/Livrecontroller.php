@@ -75,12 +75,8 @@ public function update(Request $request){
      $livre->id_auteurl=$data[4];
     //  update(['titre'=>$data[1], 'type'=>$data[2], 'dateparution'=>$data[3], 'id_auteurl'=>$data[4]]);
      $livre->save();
-    //DB::update('update livres set titre='.$request->input('titre'));
-    //DB::update("update livres set id_livre,titre,type,dateparution,id_auteurl where id_livre ,= ?",[$data[0]]);
-    //$alert= '<script>alert(<h3 class="text-success">Enregister avec succès</h3>)</script>';
-  // DB::update("update livres set id_livre='$data[1]' where titre = ?",[$data[0]]);
-   $alert= '<script>alert(<h3 class="text-success">Enregister avec succès</h3>)</script>';
-    return redirect()->route('lister');
+    $alert= '<script>alert(<h3 class="text-success">Enregister avec succès</h3>)</script>';
+    return redirect()->route('lister')->with('$alert');
     
    
     //return redirect()->route('parametre');
@@ -91,12 +87,21 @@ public function auteur(){
     return view('classer');
 }
 public function dateclass(Request $request)
-{
-    $livres = livre::orderBy('created_at')->get()->groupBy(function($data){
-        return $data->created_at->format('Y-m-d');
-    });
+{     
+    $nbreLivre = livre::all()->count();
+    $livres = livre::all()->groupBy('id_auteurl')->toArray();
 
-    return view('home');
+    // $livres = livre:: table('livres')
+    //          ->select('dateparution', DB::raw('count(*) as total'))
+    //          ->groupBy('')
+    //          ->pluck('total','auteurs')->all();
+
+    // $livres = livre::orderBy('created_at')->get()->groupBy(function($data){
+    //     return $data->created_at->format('Y-m-d');
+    // });
+    // dd($livres);
+
+    return view('classer')->with(['nbreLivre'=>$nbreLivre,'livres'=>$livres]);
 }
 
        

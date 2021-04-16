@@ -2,7 +2,7 @@
 @include('include.header')
 @section('contenu')<div class="contenu justify-content-center ">
 
-<h3 class="para m-5">La liste des livres</h3>
+<h3 class="para">La liste des livres</h3>
          <div class="d-flex">
          <!-- <div class="col-lg-3">
          <img src="assets/images/etudiante bib d.png" alt="" class="">
@@ -10,7 +10,7 @@
         
              <table class=" table m-5">
                    <thead class=" table-dark"> 
-                      <tr><th class="mile p-2 m-5 ">titre</th><th class="mile p-2 m-5">type</th><th class="mile p-2 m-5">dateparution</th><th class="mile p-2 m-5">id_auteurl</th><th class="mile p-2 m-5">action</th><th class="mile p-2 m-5">action</th></tr> 
+                      <tr><th class="mile p-2 m-5 ">Titre</th><th class="mile p-2 m-5">Type</th><th class="mile p-2 m-5">Dateparution</th><th class="mile p-2 m-5">Id_auteurl</th><th class="mile p-2 m-5">Action</th><th class="mile p-2 m-5">Action</th></tr> 
                    </thead>
                    <tbody> 
                    @foreach($livres as $livre)
@@ -80,5 +80,5 @@
 </table>
  </div>   
 </div>
-
+@include('include.footer') 
 @endsection

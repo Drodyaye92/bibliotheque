@@ -3,7 +3,7 @@
   <div class="container d-flex justify-content-center">
         <div class="">
              <div class="img"> <img src="assets/images/bibliologo.PNG" class="rounded" alt=""></div>
-                <div class="input">
+                <div class=" group-form input">
                      <form action="{{ route('inscrit.store')}}" method="POST">
                      @csrf
                              <input type="text" class="form-control m-3" name="nom" placeholder="nom">
@@ -19,5 +19,5 @@
             </div>
          </div>
    </div>
+   @include('include.footer') 
  @endsection
- <!-- @include('include.footer') -->
