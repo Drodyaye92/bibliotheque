@@ -41,10 +41,13 @@ Route::get('/liste',function(){
    $livres= DB::select('select * from livres order by titre');
    return view('liste',['livres'=>$livres]);
 })->name('lister');
-Route::post('/liste','livrecontroller@supprime')->name('livre.supprime');
+Route::post('/sup','livrecontroller@supprime')->name('supprimer');
 Route::get('/classer', function () {
      return view('classer');
 })->name('classer');
+Route::post('/liste','livrecontroller@update')->name('modified.update');
+Route::post('/voir','livrecontroller@take')->name('take');
+//Route::get('/list','livrecontroller@take')->name('take');
 //Route::get('/classer', 'Authcontroller@administrateurs')->name('classement');
 
 

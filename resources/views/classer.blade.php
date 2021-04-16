@@ -5,50 +5,34 @@
     <div class="row">
          <div class="col-lg-4">
                <h4> Mon profil</h4>
-               <img src="assets/images/images.png" alt=" " class="my-3" >
+               <img src="assets/images/images.png" alt="" class="my-3" >
                <p>Nom:</p>
                <p>Prenom</p>
-              <button>Modifier</button>
+              <button type="submit" class="btn btn-info " name="">Modifier</button>
          </div>
          <div class="col-lg-8">
-               <h2> Les differents types de documents</h2>
-               <table>
-               <thead> La liste des livres par pays</thead>
-               <tbody>
-                    <td><button type="submit" class="btn btn-danger" name="">Supprimer</button></td>
-               </tbody>
-               </table> 
-
-               <table>
-               <thead> La liste des livres par auteurs</thead>
-               <tbody>
-                   <td><button type="submit" class="btn btn-danger" name="">Supprimer</button></td>
-               </tbody>
-               </table> 
-
-               <table>
-               <thead> La liste des livres par titre</thead>
-               <tbody>
-                   <td><button type="submit" class="btn btn-danger" name="">Supprimer</button></td>
-               </tbody>
-               </table> 
-            
-
+            <section class="secte">
+                <h3 class="secte1">Le stock de livre selon leur auteurs</h3>
+                <h3 class="secte2">Le stock de livre selon leur type</h3>
+                <h3 class="secte3">Le stock de livre selon le titre du livre</h3>
+                <h3 class="secte4">Le stock de livre selon la date de parution </h3>
+                <table class="table">
+   
+            <tr>
+                <td colspan="3"><strong> Date de parution<strong></td>
+            </tr>
+        
+            <tr>
+               <td colspan="3"><strong>{{$livres->$livre}}</strong></td>
+            </tr>
+       
+   
+                 </table>
+            </section>  
          </div>
     </div>
 </div>
 </div>
 
-<!-- <script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "demo_get.asp", true);
-  xhttp.send();
-}
-</script> -->
+
 @endsection

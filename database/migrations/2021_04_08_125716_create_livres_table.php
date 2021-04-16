@@ -17,8 +17,10 @@ class CreateLivresTable extends Migration
             $table->bigIncrements('id_livre');
             $table->string('titre');
             $table->string('type');
-            $table->timestamp ('dateparution');
+            $table->date ('dateparution');
             $table->integer('id_auteurl');
+            $table->timestamps();
+
            
             
         });

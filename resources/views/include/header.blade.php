@@ -3,7 +3,11 @@
         <div class="container-fluid">
               <div class="row">
                     <div class="col-lg-6"><img src="assets/images/bibliologo.PNG"  alt=""></div> 
-                    <div class="search col-6"><input type="text" class="form-control w-50" placeholder="Rechercher"></div> 
+                    <div class="search col-4 d-d-inline "><input type="text" class="form-control " placeholder="Rechercher">
+                    </div>
+                    <div  class=" search col-lg-2">
+                    <button type="submit" class="btn btn-primary"> envoyer</button>
+                    </div>
               </div>
         </div>
         <div class="container-fluid">
