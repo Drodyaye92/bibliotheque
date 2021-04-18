@@ -88,8 +88,8 @@ public function auteur(){
 }
 public function dateclass(Request $request)
 {     
-    $nbreLivre = livre::all()->count();
-    $livres = livre::all()->groupBy('id_auteurl')->toArray();
+    $nbreLivre = livre::all();
+    //$livres = livre::all()->groupBy('id_auteurl')->toArray();
 
     // $livres = livre:: table('livres')
     //          ->select('dateparution', DB::raw('count(*) as total'))
@@ -101,8 +101,10 @@ public function dateclass(Request $request)
     // });
     // dd($livres);
 
-    return view('classer')->with(['nbreLivre'=>$nbreLivre,'livres'=>$livres]);
+    return view('classer', compact('nbreLivre'));
 }
+
+            
 
        
 }

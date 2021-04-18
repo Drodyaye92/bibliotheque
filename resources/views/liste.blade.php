@@ -10,7 +10,7 @@
         
              <table class=" table m-5">
                    <thead class=" table-dark"> 
-                      <tr><th class="mile p-2 m-5 ">Titre</th><th class="mile p-2 m-5">Type</th><th class="mile p-2 m-5">Dateparution</th><th class="mile p-2 m-5">Id_auteurl</th><th class="mile p-2 m-5">Action</th><th class="mile p-2 m-5">Action</th></tr> 
+                      <tr><th class="mile p-2 m-5 ">Titre</th><th class="mile p-2 m-5">Type</th><th class="mile p-2 m-5">Dateparution</th><th class="mile p-2 m-5">Auteur</th><th class="mile p-2 m-5">Action</th><th class="mile p-2 m-5">Action</th></tr> 
                    </thead>
                    <tbody> 
                    @foreach($livres as $livre)
@@ -20,8 +20,6 @@
                             <td class="espace p-2 m-5">{{$livre->dateparution}}</td>
                             <td class="espace p-2 m-5">{{$livre->id_auteurl}}</td>
                             <td class="espace p-2 m-5">
-                          
-
            <div id="html">
              <form action="{{route('take')}}" method="get"></form> 
              <button type="button"  data-bs-toggle="modal" data-bs-target="#modal" class="btn btn-primary">Details</button>
